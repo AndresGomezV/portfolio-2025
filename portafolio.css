@@ -264,7 +264,7 @@ p {
 #social-media-btns a {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
   width: 40px; /* Ancho del círculo */
   height: 40px; /* Alto del círculo */
   border-radius: 50%; /* Hace el círculo perfecto */
@@ -272,10 +272,12 @@ p {
   transition: all 0.3s ease; /* Transición suave para el color de fondo */
 }
 
+
 #social-media-btns a span {
-  display: block;
+  display: flex;
   font-size: 24px; /* Tamaño del ícono */
   color: white; /* Color del ícono */
+  
 }
 
 #social-media-btns a:hover {
@@ -393,36 +395,47 @@ transform: scale(1.1);
   text-align: left;
 }
 
+.button-container {
+  display: flex;
+  gap: 20px; /* Espaciado horizontal entre botones */
+  padding: 10px 0 10px 0;
+  align-items: center; /* Centrar verticalmente (si los botones tienen alturas diferentes) */
+}
 
 .project-link {
   display: inline-block;
-  margin: 5px 0 10px 0;
+  margin: 5px 0 5px 0;
   padding: 10px 5px 10px 0;
   text-decoration: none;
   font-size: 20px;
   font-family: "Raleway", sans-serif;
   transition: all 0.3s ease;
-  width: 30%;
+  width: 35%;  
   border-radius: 10px;
   background-color: #ffffff;
   color: rgb(0, 0, 0);  
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  
+  
 }
 
 .project-link:hover {
-  transform: scale(1.1); 
-  
+  transform: scale(1.05); 
+  border-radius: 10px;  
+  box-shadow: 4px 4px 10px  rgba(0, 0, 0, 0.1);
 }
 
 .project-link:active {
   transform: scale(1); 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   
 }
 
 .tech-icons{
-  display: flex;
-  
+  display: flex;  
   align-items: center; /* Para alinear verticalmente */
-  gap: 10px;
+  gap: 15px;
 }
 
 .tech-icons i {
