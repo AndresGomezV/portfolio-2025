@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hola, soy Andrés Gómez, desarrollador Full-Stack. Descubre mis proyectos y colaboremos en ideas increíbles."
+    />
+
+    <title>Portafolio</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Nunito+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="portafolio.css" />
+  </head>
+  <body>
+    <!-- NavBar-->
+
+    <nav>
+      <div id="navbar-container">
+        <a href="#" id="logo">
+          <img src="./imgs/LOGO2.png" alt="Logo" />
+        </a>
+        <ul id="nav-btns">
+          <li>
+            <a href="#">Inicio</a>
+          </li>
+          <li>
+            <a href="#about-me">Acerca de mí</a>
+          </li>
+          <li>
+            <a href="#Education">Educación</a>
+          </li>
+          <li>
+            <a href="#projects-section">Proyectos</a>
+          </li>
+          <li>
+            <a href="#contact-me">Contáctame</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section id="hero-section">
+      <div id="banner-container">
+        <header id="left-container">
+          <h1 id="nombre">Andrés Gómez Vásquez</h1>
+          <h2 id="profesion">Desarrollador Full-Stack</h2>
+          <p id="descripcion">
+            La programación es lo que me apasiona, y me encanta todo lo que se
+            puede lograr con código. Estoy en constante aprendizaje y siempre
+            estoy buscando nuevas oportunidades para colaborar en proyectos
+            interesantes.<strong> ¡Hagamos algo increíble juntos!</strong>
+          </p>
+
+          <!-- Botones de redes sociales -->
+
+          <div id="social-media-btns">
+            <a
+              href="https://www.linkedin.com/in/andresgomezv/"
+              aria-label="LinkedIn de Andrés Gómez"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>
+                <i class="fab fa-linkedin"></i>
+              </span>
+            </a>
+            <a
+              href="https://github.com/AndresGomezV"
+              aria-label="GitHub de Andrés Gómez"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>
+                <i class="fab fa-github"></i>
+              </span>
+            </a>
+            <a
+              href="mailto:andresxv98@gmail.com"
+              aria-label="Enviar al correo de Andrés Gómez"
+            >
+              <span>
+                <i class="fas fa-envelope"></i>
+              </span>
+            </a>
+            <a
+              href="https://wa.me/573245768250"
+              aria-label="WhatsApp de Andrés Gómez"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>
+                <i id="wp" class="fab fa-whatsapp"></i>
+              </span>
+            </a>
+          </div>
+        </header>
+        <div id="right-container">
+          <img src="./imgs/AndresGomez.jpg" alt="Foto de Andrés Gómez" />
+        </div>
+      </div>
+    </section>
+
+    <h1 id="projects-header">Proyectos</h1>
+    <section id="projects-section">
+      
+      <div id="projects-container">
+        <div class="carousel-and-description">
+          <!-- Carousel -->
+          <div class="carousel">
+            <div class="slides">
+              <div class="slide active">
+                <img
+                  src="./imgs/mainPage.png"
+                  alt="página principal Elevia"
+                />
+                <p class="image-description">Home Page</p>
+              </div>
+              <div class="slide">
+                <img
+                  src="./imgs/catalogo.png"
+                  alt="catálogo con filtros"
+                />
+                <p class="image-description">
+                  Catálogo
+                </p>
+              </div>
+              <div class="slide">
+                <img
+                  src="./imgs/image (11).png"
+                  alt="carrito de compras"
+                />
+                <p class="image-description">About Us</p>
+              </div>              
+              <div class="slide">
+                <img
+                  src="./imgs/image (10).png"
+                  alt="pantalla de autenticación"
+                />
+                <p class="image-description">Contact Us</p>
+              </div>              
+              <div class="slide">
+                <img
+                  src="./imgs/Footer.png"
+                  alt="vista móvil"
+                />
+                <p class="image-description">Footer</p>
+              </div>
+            </div>
+            <button class="nav-btn prev-btn">&#8249;</button>
+            <button class="nav-btn next-btn">&#8250;</button>
+          </div>
+
+          <!-- Description -->
+          <header id="description-container">
+            <h2 class="project-name">Elevia: E-Commerce</h2>
+            <p class="project-description">
+              Una plataforma de comercio electrónico que permite a los usuarios
+              buscar, agregar productos al carrito y realizar compras seguras.
+            </p>
+            <h3 class="project-features">Características</h3>
+            <ul>
+              <li>Autenticación de usuarios</li>
+              <li>Interfaz de usuario amigable</li>
+              <li>Carrito de compras</li>
+              <li>Soporte para múltiples métodos de pago</li>
+            </ul>
+            <a
+              href="https://github.com/JaviSGalindo/Generation-7-Final-Proyect"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              Ver en GitHub
+            </a>
+            <div class="tech-icons">
+              <i class="fab fa-html5" title="HTML"></i>
+              <i class="fab fa-css3-alt" title="CSS"></i>
+              <i class="fab fa-js" title="JavaScript"></i>
+              <i class="fab fa-java" title="Java"></i>
+              <i class="fas fa-database" title="MySQL"></i>
+              <i class="fas fa-leaf" title="Spring Boot"></i>
+            </div>
+          </header>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer-->
+
+    <footer>
+      <h3>Made with &hearts; by Andrés G. &COPY; 2025</h3>
+    </footer>
+    <script src="portfolio.js"></script>
+  </body>
+</html>

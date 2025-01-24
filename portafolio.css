@@ -1,0 +1,503 @@
+/* Reset de márgenes y rellenos para todo */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Asegura que los tamaños incluyan bordes y rellenos */
+}
+
+/* Asegurarse de que el body ocupe todo el espacio de la ventana */
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.5;
+  background-color: #fff; /* Color de fondo predeterminado */
+  color: #000; /* Color de texto */
+  font-size: 16px; /* Tamaño base del texto */
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none; /* Eliminar subrayado */
+  color: inherit; /* Heredar color del texto */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Prevenir el salto de los textos en listas */
+ul,
+ol {
+  list-style: none; /* Eliminar puntos o números de listas */
+}
+
+/* Establecer que las imágenes no excedan el ancho de su contenedor */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos NavBar */
+
+nav {
+  padding: 10px 0 10px 0;
+  padding-right: 80px;
+  padding-left: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo translúcido */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Borde sutil */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  backdrop-filter: blur(2px); /* Desenfoque del contenido por debajo */
+}
+
+#navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#logo img {
+  max-width: 150px;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+#logo img:hover {
+  transform: scale(1.02);
+}
+
+#logo img:active {
+  transform: scale(1);
+}
+
+#nav-btns {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+#nav-btns li {
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+#nav-btns li:hover {
+  transform: scale(1.1);
+}
+
+#nav-btns li:active {
+  transform: scale(1);
+}
+
+#hero-section {
+  margin-top: 110px;
+  padding: 20px;
+  
+}
+
+#nav-btns li a {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+}
+
+/* Estilos Hero */
+
+#hero-section,
+#projects-section {
+  display: flex; /* Usamos Flexbox para alinearlo horizontalmente */
+  justify-content: space-between; /* Asegura que haya espacio entre los dos contenedores */
+  align-items: center; /* Alinea los items verticalmente al centro */
+  height: 50vh; /* Hace que el Hero Section ocupe toda la altura de la pantalla */
+  padding: 0 20px; /* Añade un poco de padding para que no toque los bordes */
+  margin-top: 200px;
+  padding-bottom: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#banner-container {
+  display: flex; /* Usamos flexbox dentro del contenedor principal */
+  width: 100%; /* Hace que ocupe todo el ancho disponible */
+}
+
+#left-container,
+#description-container {
+  flex: 1; /* Ocupa la mitad del espacio disponible */
+  display: flex;
+  flex-direction: column; /* Coloca los elementos (h1, h2, p) de forma vertical */
+  justify-content: center; /* Alinea el contenido verticalmente al centro */
+  margin-left: 40px;
+  margin-right: 30px;
+}
+
+#right-container,
+#slider-container {
+  flex: 1; /* Ocupa la mitad del espacio disponible */
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+}
+
+#right-container img {
+  max-width: 50%;
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, transparent);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+#right-container img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#right-container img:active {
+  transform: scale(1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h1,
+h2,
+p {
+  text-align: left;
+}
+
+#social-media-btns a {
+  margin-right: 10px; /* Espaciado entre los botones sociales */
+}
+
+@media (min-width: 769px) {
+  #nombre {
+    font-size: 3.5rem;
+    color: #000;
+  }
+
+  #profesion {
+    font-size: 2.5rem;
+    color: #333;
+  }
+
+  #descripcion {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  #hero-section {
+    flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin-top: 100px; /* Ajusta el margen superior */
+  }
+
+  #banner-container {
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos en la columna */
+  }
+
+  #left-container,
+  #right-container {
+    flex: none; /* Desactiva la división en 50% para cada contenedor */
+    width: 100%; /* Hace que los contenedores ocupen el 100% del ancho */
+    margin-bottom: 20px; /* Añade un pequeño espacio entre los contenedores */
+  }
+
+  #right-container {
+    margin-top: 20px; /* Espacio adicional entre el contenedor izquierdo y la imagen */
+  }
+
+  #nombre,
+  #projects-title {
+    font-size: 8vw; /* 8% del ancho de la ventana */
+    color: #000;
+  }
+
+  #profesion {
+    font-size: 5vw; /* 5% del ancho de la ventana */
+    color: #000000c5;
+  }
+
+  /* Añadir margen superior al nombre en dispositivos pequeños para evitar que se meta bajo la navbar */
+  #left-container h1 {
+    margin-top: 20px; /* Espacio adicional arriba del nombre */
+  }
+}
+
+/* Botones de redes sociales */
+
+#social-media-btns {
+  display: flex;
+  gap: 15px; /* Espacio entre los botones */
+  align-items: center;
+  padding: 10px;
+  padding-left: 0;
+}
+
+#social-media-btns a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Ancho del círculo */
+  height: 40px; /* Alto del círculo */
+  border-radius: 50%; /* Hace el círculo perfecto */
+  background-color: #000; /* Color de fondo por defecto */
+  transition: all 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+#social-media-btns a span {
+  display: block;
+  font-size: 24px; /* Tamaño del ícono */
+  color: white; /* Color del ícono */
+}
+
+#social-media-btns a:hover {
+  
+  transform: scale(1.1);
+}
+
+#social-media-btns a:active {
+  
+  transform: scale(1);
+}
+
+/* Colores de fondo según el ícono */
+#social-media-btns a[href*="linkedin"] {
+  background-color: #0e76a8; /* Color de fondo de LinkedIn */
+}
+
+#social-media-btns a[href*="github"] {
+  background-color: #333; /* Color de fondo de GitHub */
+}
+
+#social-media-btns a[href*="mailto"] {
+  background-color: #007bff; /* Color de fondo para el correo */
+}
+
+#social-media-btns a[href^="https://wa.me"]
+{
+  background-color: #25d366; /* Color de fondo para WhatsApp */
+}
+
+/* Media query para hacer los botones más pequeños en pantallas pequeñas */
+@media (max-width: 768px) {
+  #social-media-btns a {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+/* Estilos Projects Section */
+
+/* General Styling */
+#projects-container {
+  display: flex;
+  width: 100%;  
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.carousel-and-description {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Carousel Styling */
+.carousel {
+  position: relative;
+  width: 700px;
+  overflow: hidden;
+  border-radius: 10px;
+  
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  text-align: center;
+ 
+}
+
+.slide p {
+  justify-self: center;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 48px;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.slide p {
+  font-family: "Raleway", sans-serif;
+  padding: 10px;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.slide p:hover {
+transform: scale(1.1);
+}
+
+/* Description Styling */
+#description-container {
+  max-width: 500px;
+  text-align: left;
+}
+
+
+.project-link {
+  display: inline-block;
+  margin: 5px 0 10px 0;
+  padding: 10px 5px 10px 0;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  transition: all 0.3s ease;
+  width: 30%;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);  
+}
+
+.project-link:hover {
+  transform: scale(1.1); 
+  
+}
+
+.project-link:active {
+  transform: scale(1); 
+  
+}
+
+.tech-icons{
+  display: flex;
+  
+  align-items: center; /* Para alinear verticalmente */
+  gap: 10px;
+}
+
+.tech-icons i {
+  display: flex;
+  font-size: 24px;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Ancho del círculo */
+  height: 40px; /* Alto del círculo */
+  border-radius: 50%; /* Hace el círculo perfecto */
+  background-color: #0000006e; /* Color de fondo por defecto */
+  transition: all 0.3s ease;
+  
+}
+
+.tech-icons i:hover {
+  transform: scale(1.1); /* Efecto al pasar el ratón sobre el ícono */
+}
+
+.tech-icons i:active {
+  transform: scale(1); /* Efecto al pasar el ratón sobre el ícono */
+}
+
+.project-name {
+  font-size: 42px;
+}
+
+.project-description {
+  font-size: 20px;
+}
+
+.project-features {
+  font-size: 32px;
+  padding: 10px 10px 0 0;
+}
+
+.carousel-and-description ul li {
+  font-size: 20px;
+}
+
+.tech-icons .fa-html5 {
+  background-color: #e44d26; /* HTML */
+  color: white;
+}
+
+.tech-icons .fa-css3-alt {
+  background-color: #264de4; /* CSS */
+  color: white;
+}
+
+.tech-icons .fa-js {
+  background-color: #f7df1e; /* JavaScript */
+  color: black;
+}
+
+.tech-icons .fa-java {
+  background-color: #007396; /* Java */
+  color: white;
+}
+
+.tech-icons .fa-database {
+  background-color: #f29111; /* MySQL */
+  color: white;
+}
+
+.tech-icons .fa-leaf {
+  background-color: #6db33f; /* Spring Boot */
+  color: white;
+}
+
+
+#projects-header {
+  padding: 50px;
+  text-align: center;
+  margin-bottom: -200px;
+  font-size: 48px;
+}
