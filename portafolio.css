@@ -120,7 +120,6 @@ nav {
 #hero-section {
   margin-top: 110px;
   padding: 20px;
-  
 }
 
 #nav-btns li a {
@@ -264,7 +263,7 @@ p {
 #social-media-btns a {
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   width: 40px; /* Ancho del círculo */
   height: 40px; /* Alto del círculo */
   border-radius: 50%; /* Hace el círculo perfecto */
@@ -272,21 +271,17 @@ p {
   transition: all 0.3s ease; /* Transición suave para el color de fondo */
 }
 
-
 #social-media-btns a span {
   display: flex;
   font-size: 24px; /* Tamaño del ícono */
   color: white; /* Color del ícono */
-  
 }
 
 #social-media-btns a:hover {
-  
   transform: scale(1.1);
 }
 
 #social-media-btns a:active {
-  
   transform: scale(1);
 }
 
@@ -322,10 +317,9 @@ p {
 /* General Styling */
 #projects-container {
   display: flex;
-  width: 100%;  
+  width: 100%;
   justify-content: center;
   align-items: center;
-  
 }
 
 .carousel-and-description {
@@ -340,7 +334,6 @@ p {
   width: 700px;
   overflow: hidden;
   border-radius: 10px;
-  
 }
 
 .slides {
@@ -351,7 +344,6 @@ p {
 .slide {
   min-width: 100%;
   text-align: center;
- 
 }
 
 .slide p {
@@ -386,7 +378,7 @@ p {
 }
 
 .slide p:hover {
-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Description Styling */
@@ -398,42 +390,39 @@ transform: scale(1.1);
 .button-container {
   display: flex;
   gap: 20px; /* Espaciado horizontal entre botones */
-  padding: 10px 0 10px 0;
+  padding: 5px 0 10px 0;
   align-items: center; /* Centrar verticalmente (si los botones tienen alturas diferentes) */
 }
 
 .project-link {
   display: inline-block;
   margin: 5px 0 5px 0;
-  padding: 10px 5px 10px 0;
+  padding: 10px 0 10px 0;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Raleway", sans-serif;
   transition: all 0.3s ease;
-  width: 35%;  
+  width: 35%;
   border-radius: 10px;
   background-color: #ffffff;
-  color: rgb(0, 0, 0);  
+  color: rgb(0, 0, 0);
   text-align: center;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  
-  
 }
 
 .project-link:hover {
-  transform: scale(1.05); 
-  border-radius: 10px;  
-  box-shadow: 4px 4px 10px  rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-link:active {
-  transform: scale(1); 
+  transform: scale(1);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  
 }
 
-.tech-icons{
-  display: flex;  
+.tech-icons {
+  display: flex;
   align-items: center; /* Para alinear verticalmente */
   gap: 15px;
 }
@@ -449,7 +438,6 @@ transform: scale(1.1);
   border-radius: 50%; /* Hace el círculo perfecto */
   background-color: #0000006e; /* Color de fondo por defecto */
   transition: all 0.3s ease;
-  
 }
 
 .tech-icons i:hover {
@@ -506,7 +494,6 @@ transform: scale(1.1);
   background-color: #6db33f; /* Spring Boot */
   color: white;
 }
-
 
 #projects-header {
   padding: 50px;
