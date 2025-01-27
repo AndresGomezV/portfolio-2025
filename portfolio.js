@@ -1,3 +1,14 @@
+/* Hamburguer Nav */
+const hamburguer = document.getElementById("hamburguer");
+const navBtns = document.getElementById("nav-btns");
+
+function toggleMenu() {
+  const navBtns = document.getElementById('nav-btns');
+  navBtns.classList.toggle('show');
+}
+
+/*Slider*/
+
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');

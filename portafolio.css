@@ -127,10 +127,71 @@ nav {
   font-family: "Raleway", sans-serif;
 }
 
+.navBar.open #nav-btns {
+  display: flex;
+}
+
+.navBar.open #nav-btns {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #nav-btns li {
+    border-bottom: 1px solid #ddd;
+  }
+}
+.hidden {
+  display: none; /* Oculta el elemento */
+}
+
+#hamburger {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  right: 30px; /* Espaciado del borde derecho */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#hamburger i {
+  font-size: 30px;
+  color: rgb(0, 0, 0); /* Color del ícono */
+}
+
+@media (min-width: 769px) {
+  #hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #nav-btns {
+    display: none; /* Por defecto oculto */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Justo debajo de la navbar */
+    right: 10px;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elevado */
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(-10px); /* Animación de aparición */
+  }
+
+  #nav-btns.show {
+    display: flex;
+    opacity: 1; /* Visible al activarse */
+    transform: translateY(0); /* Animación hacia abajo */
+  }
+}
 /* Estilos Hero */
 
-#hero-section,
-#projects-section {
+#hero-section {
   display: flex; /* Usamos Flexbox para alinearlo horizontalmente */
   justify-content: space-between; /* Asegura que haya espacio entre los dos contenedores */
   align-items: center; /* Alinea los items verticalmente al centro */
@@ -138,6 +199,18 @@ nav {
   padding: 0 20px; /* Añade un poco de padding para que no toque los bordes */
   margin-top: 200px;
   padding-bottom: 50px;
+  box-shadow: 0 2px 5px rgba(255, 0, 0, 0.1);
+}
+
+#projects-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+  padding: 20px;
+
+  margin-top: 100px; /* Espaciado desde arriba */
+  height: 600px; /* Ajustar altura según el contenido */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -146,8 +219,7 @@ nav {
   width: 100%; /* Hace que ocupe todo el ancho disponible */
 }
 
-#left-container,
-#description-container {
+#left-container {
   flex: 1; /* Ocupa la mitad del espacio disponible */
   display: flex;
   flex-direction: column; /* Coloca los elementos (h1, h2, p) de forma vertical */
@@ -194,7 +266,7 @@ p {
   margin-right: 10px; /* Espaciado entre los botones sociales */
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   #nombre {
     font-size: 3.5rem;
     color: #000;
@@ -210,8 +282,41 @@ p {
   }
 }
 
+@media (max-width: 767px) {
+  #nombre {
+    font-size: 3.5rem;
+    color: #000;
+  }
+
+  #profesion {
+    font-size: 2.5rem;
+    color: #333;
+  }
+
+  #descripcion {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  #nombre {
+    font-size: 2rem;
+    color: #000;
+  }
+
+  #profesion {
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  #descripcion {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 1024px) {
-  #hero-section {
+  #hero-section,
+  #projects-section {
     flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
     height: auto; /* Ajusta la altura automáticamente */
     margin-top: 100px; /* Ajusta el margen superior */
@@ -231,17 +336,6 @@ p {
 
   #right-container {
     margin-top: 20px; /* Espacio adicional entre el contenedor izquierdo y la imagen */
-  }
-
-  #nombre,
-  #projects-title {
-    font-size: 8vw; /* 8% del ancho de la ventana */
-    color: #000;
-  }
-
-  #profesion {
-    font-size: 5vw; /* 5% del ancho de la ventana */
-    color: #000000c5;
   }
 
   /* Añadir margen superior al nombre en dispositivos pequeños para evitar que se meta bajo la navbar */
@@ -315,6 +409,7 @@ p {
 /* Estilos Projects Section */
 
 /* General Styling */
+
 #projects-container {
   display: flex;
   width: 100%;
@@ -326,12 +421,14 @@ p {
   display: flex;
   gap: 20px;
   align-items: center;
+  padding: 100px 50px 100px 50px;
 }
 
 /* Carousel Styling */
 .carousel {
   position: relative;
-  width: 700px;
+  width: 100%; /* Hacer que el carousel ocupe todo el ancho disponible */
+  max-width: 700px; /* Ajuste el ancho máximo para pantallas grandes */
   overflow: hidden;
   border-radius: 10px;
 }
@@ -346,8 +443,64 @@ p {
   text-align: center;
 }
 
+.slide img {
+  max-width: 100%; /* Limitar el ancho máximo de las imágenes */
+  height: auto;
+  border-radius: 10px;
+}
+
 .slide p {
   justify-self: center;
+}
+
+@media (max-width: 1024px) {
+  .carousel-and-description {
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos en la columna */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-and-description {
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos en la columna */
+  }
+  #right-container img {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 425px) {
+  #projects-section {
+    max-width: 100%;
+  }
+
+  .carousel {
+    position: relative;
+    width: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  #logo img {
+    max-width: 100px;
+    height: auto;
+    transition: all 0.3s ease;
+  }
+
+  #right-container img {
+    max-width: 100%;
+  }
+
+  .carousel-and-description {
+    padding: 100px 0;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos en la columna */
+  }
+
+  .slide {
+    padding: 10px;
+  }
 }
 
 .nav-btn {
@@ -421,6 +574,12 @@ p {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 425px) {
+  .project-link {
+    width: 100%;
+  }
+}
+
 .tech-icons {
   display: flex;
   align-items: center; /* Para alinear verticalmente */
@@ -448,17 +607,59 @@ p {
   transform: scale(1); /* Efecto al pasar el ratón sobre el ícono */
 }
 
-.project-name {
-  font-size: 42px;
+@media (min-width: 768px) {
+  .project-name {
+    font-size: 3rem;
+    color: #000;
+  }
+
+  .project-description {
+    font-size: 1.5rem;
+  }
+
+  .project-features {
+    font-size: 2.5rem;
+    color: #333;
+  }
 }
 
-.project-description {
-  font-size: 20px;
+@media (max-width: 767px) {
+  .project-name {
+    font-size: 3rem;
+    color: #000;
+  }
+
+  .project-description {
+    font-size: 1.5rem;
+  }
+
+  .project-features {
+    font-size: 2.5rem;
+    color: #333;
+  }
 }
 
-.project-features {
-  font-size: 32px;
-  padding: 10px 10px 0 0;
+@media (max-width: 425px) {
+  .project-name {
+    font-size: 1.5rem;
+    color: #000;
+  }
+
+  .project-features {
+    font-size: 1.4rem;
+    color: #333;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+  #description-container ul li {
+    font-size: 1rem;
+  }
+}
+
+.carousel-and-description ul li {
+  font-size: 1rem;
 }
 
 .carousel-and-description ul li {
@@ -500,4 +701,60 @@ p {
   text-align: center;
   margin-bottom: -200px;
   font-size: 48px;
+}
+
+@media (max-width: 375px) {
+  #projects-section {
+    padding: 10px;
+  }
+  #projects-container {
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho de la pantalla */
+
+    overflow: hidden; /* Evita que el contenido se desborde */
+  }
+
+  .carousel-and-description {
+    flex-direction: column; /* Cambiar la dirección a columna para pantallas más pequeñas */
+    align-items: center;
+  }
+
+  .slide {
+    width: 100%; /* Asegurar que las diapositivas ocupen todo el ancho disponible */
+    max-width: 100%;
+    height: auto; /* Mantener la proporción de la imagen */
+  }
+
+  .slide img {
+    width: 100%; /* Asegurar que las imágenes ocupen el 100% del contenedor */
+    height: auto; /* Mantener la proporción */
+    object-fit: cover;
+  }
+
+  #description-container {
+    text-align: center;
+    justify-self: center;
+    flex-direction: column;
+  }
+
+  .project-name,
+  .project-description {
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  .button-container {
+    width: 70%; /* Asegurar que los botones ocupen el 100% del contenedor */
+    justify-self: center;
+    flex-direction: column;
+    justify-content: center; /* Centrar los botones */
+    gap: 10px; /* Espaciado entre los botones */
+  }
+
+  .tech-icons {
+    display: grid;
+    justify-self: center;
+    justify-items: center;
+    padding: 10px 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
