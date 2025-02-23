@@ -1,760 +1,1046 @@
-/* Reset de márgenes y rellenos para todo */
+/* Reset de márgenes, rellenos y box-sizing para todo */
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Asegura que los tamaños incluyan bordes y rellenos */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Asegurarse de que el body ocupe todo el espacio de la ventana */
+/* Asegurar que el body ocupe todo el espacio de la ventana */
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
+/* Estilos del body */
 body {
-  font-family: "Nunito Sans", sans-serif;
-  line-height: 1.5;
-  background-color: #fff; /* Color de fondo predeterminado */
-  color: #000; /* Color de texto */
-  font-size: 16px; /* Tamaño base del texto */
-  margin: 0;
-  padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
+/* Estilos globales para los enlaces */
 a {
-  text-decoration: none; /* Eliminar subrayado */
-  color: inherit; /* Heredar color del texto */
+    text-decoration: none;
+    color: inherit;
 }
 
+/* Estilos para los encabezados */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
-/* Prevenir el salto de los textos en listas */
+/* Estilos para listas */
 ul,
 ol {
-  list-style: none; /* Eliminar puntos o números de listas */
+    list-style: none;
 }
 
-/* Establecer que las imágenes no excedan el ancho de su contenedor */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Estilos NavBar */
-
+/* Estilos para la barra de navegación */
 nav {
-  padding: 10px 0 10px 0;
-  padding-right: 80px;
-  padding-left: 80px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.9); /* Fondo translúcido */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Borde sutil */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  backdrop-filter: blur(2px); /* Desenfoque del contenido por debajo */
+    padding: 10px 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
 }
 
+/* Contenedor principal de la barra de navegación */
 #navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+/* Estilos del logo */
 #logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
+/* Estilos de la imagen del logo */
 #logo img {
-  max-width: 150px;
-  height: auto;
-  transition: all 0.3s ease;
+    max-width: 150px;
+    height: auto;
+    transition: all 0.3s ease;
 }
 
 #logo img:hover {
-  transform: scale(1.02);
+    transform: scale(1.02);
 }
 
 #logo img:active {
-  transform: scale(1);
+    transform: scale(1);
 }
 
+/* Botones de navegación */
 #nav-btns {
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
+/* Estilos de cada botón dentro de la navegación */
 #nav-btns li {
-  padding: 10px;
-  transition: all 0.3s ease;
+    padding: 10px;
+    transition: all 0.3s ease;
 }
 
 #nav-btns li:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #nav-btns li:active {
-  transform: scale(1);
+    transform: scale(1);
 }
 
-#hero-section {
-  margin-top: 110px;
-  padding: 20px;
-}
-
+/* Estilos de los enlaces dentro de los botones */
 #nav-btns li a {
-  font-size: 16px;
-  font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
 }
 
+/* Configuración para botones visibles en navegación abierta */
 .navBar.open #nav-btns {
-  display: flex;
+    display: flex;
 }
 
+/* Configuración de diseño en navegación abierta */
 .navBar.open #nav-btns {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-@media (max-width: 768px) {
-  #nav-btns li {
-    border-bottom: 1px solid #ddd;
-  }
+/* Media query para pantallas pequeñas */
+@media (max-width: 884px) {
+    #nav-btns li {
+        border-bottom: 1px solid #ddd;
+    }
 }
+
+/* Ocultar elementos */
 .hidden {
-  display: none; /* Oculta el elemento */
+    display: none;
 }
 
+/* Estilos para el ícono del menú hamburguesa */
 #hamburger {
-  display: block;
-  cursor: pointer;
-  position: absolute;
-  right: 30px; /* Espaciado del borde derecho */
-  top: 50%;
-  transform: translateY(-50%);
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #hamburger i {
-  font-size: 30px;
-  color: rgb(0, 0, 0); /* Color del ícono */
+    font-size: 30px;
+    color: rgb(0, 0, 0);
 }
 
-@media (min-width: 769px) {
-  #hamburger {
-    display: none;
-  }
+@media (min-width: 884px) {
+    #hamburger {
+        display: none;
+    }
 }
 
-@media (max-width: 768px) {
-  #nav-btns {
-    display: none; /* Por defecto oculto */
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* Justo debajo de la navbar */
-    right: 10px;
-    background-color: white;
-    padding: 15px 20px;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elevado */
-    z-index: 1000;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    opacity: 0; /* Inicialmente invisible */
-    transform: translateY(-10px); /* Animación de aparición */
-  }
+/* Configuración para botones de navegación en pantallas pequeñas */
+@media (max-width: 884px) {
+    #nav-btns {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: white;
+        padding: 15px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
 
-  #nav-btns.show {
-    display: flex;
-    opacity: 1; /* Visible al activarse */
-    transform: translateY(0); /* Animación hacia abajo */
-  }
+    #nav-btns.show {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-/* Estilos Hero */
 
+/* Estilos para la sección Hero */
 #hero-section {
-  display: flex; /* Usamos Flexbox para alinearlo horizontalmente */
-  justify-content: space-between; /* Asegura que haya espacio entre los dos contenedores */
-  align-items: center; /* Alinea los items verticalmente al centro */
-  height: 50vh; /* Hace que el Hero Section ocupe toda la altura de la pantalla */
-  padding: 0 20px; /* Añade un poco de padding para que no toque los bordes */
-  margin-top: 200px;
-  padding-bottom: 50px;
-  box-shadow: 0 2px 5px rgba(255, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+    margin-top: 200px;
+    padding: 0 20px 50px;
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.1);
 }
 
+/* Sección de proyectos */
 #projects-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
-  padding: 20px;
-
-  margin-top: 100px; /* Espaciado desde arriba */
-  height: 600px; /* Ajustar altura según el contenido */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 100px;
+    height: 800px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/*Section About me */
+
+
+#about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skills-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.skills-icons i {
+    display: flex;
+    font-size: 24px;
+    margin-right: 10px;
+    justify-content: center;
+}
+
+
+#about-me h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#about-me h2 {
+    font-size: 2rem;
+    padding-left: 20px;
+}
+
+#about-me li {
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+@media (max-width: 884px) {
+    #about-me h1 {
+        font-size: 1.8rem;
+    }
+
+    #about-me h2 {
+        font-size: 1.3rem;
+    }
+
+    #about-me p {
+        font-size: 0.95rem;
+    }
+
+    .skills-icons {
+        gap: 10px; /* Reduce el espacio entre iconos */
+    }
+
+    .skills-icons .icon {
+        font-size: 1.8rem; /* Iconos más pequeños */
+    }
+}
+
+/* Vista móviles (pantallas pequeñas) */
+@media (max-width: 480px) {
+    #about-me h1 {
+        font-size: 1.8rem;
+    }
+
+    #about-me h2 {
+        font-size: 1.5rem;
+    }
+
+    #about-me li {
+        font-size: 1rem;
+        max-width: 90%; /* Ensanchar texto dentro de móviles */
+        text-align: center;
+    }
+
+    .skills-icons {
+        flex-wrap: wrap; /* Permitir que los iconos se ajusten a múltiples líneas */
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .skills-icons .icon {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* Contenedor principal del banner */
 #banner-container {
-  display: flex; /* Usamos flexbox dentro del contenedor principal */
-  width: 100%; /* Hace que ocupe todo el ancho disponible */
+    display: flex;
+    width: 100%;
 }
 
+/* Contenedor izquierdo del banner */
 #left-container {
-  flex: 1; /* Ocupa la mitad del espacio disponible */
-  display: flex;
-  flex-direction: column; /* Coloca los elementos (h1, h2, p) de forma vertical */
-  justify-content: center; /* Alinea el contenido verticalmente al centro */
-  margin-left: 40px;
-  margin-right: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 30px;
 }
 
+/* Contenedor derecho y slider */
 #right-container,
 #slider-container {
-  flex: 1; /* Ocupa la mitad del espacio disponible */
-  display: flex;
-  justify-content: center; /* Centra la imagen horizontalmente */
-  align-items: center; /* Centra la imagen verticalmente */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Imagen del contenedor derecho */
 #right-container img {
-  max-width: 50%;
-  height: auto; /* Mantiene la proporción de la imagen */
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, transparent);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
-  z-index: 1;
+    max-width: 50%;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    z-index: 1;
 }
 
 #right-container img:hover {
-  transform: scale(1.01);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.01);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 #right-container img:active {
-  transform: scale(1);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Encabezados y párrafos */
 h1,
 h2,
 p {
-  text-align: left;
+    text-align: left;
+}
+    #nombre {
+        font-size: 3.5rem;
+        color: #000;
+    }
+
+    #profesion {
+        font-size: 2.5rem;
+        color: #333;
+    }
+
+    #descripcion {
+        font-size: 1.5rem;
+    }
+
+@media (max-width: 884px) {
+    #nombre {
+        font-size: 3.5rem;
+        color: #000;
+    }
+
+    #profesion {
+        font-size: 2.5rem;
+        color: #333;
+    }
+
+    #descripcion {
+        font-size: 1.5rem;
+    }
 }
 
-#social-media-btns a {
-  margin-right: 10px; /* Espaciado entre los botones sociales */
+@media (max-width: 480px) {
+    #nombre {
+        font-size: 2rem;
+        color: #000;
+    }
+
+    #profesion {
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    #descripcion {
+        font-size: 1.2rem;
+    }
 }
 
-@media (min-width: 768px) {
-  #nombre {
-    font-size: 3.5rem;
-    color: #000;
-  }
-
-  #profesion {
-    font-size: 2.5rem;
-    color: #333;
-  }
-
-  #descripcion {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 767px) {
-  #nombre {
-    font-size: 3.5rem;
-    color: #000;
-  }
-
-  #profesion {
-    font-size: 2.5rem;
-    color: #333;
-  }
-
-  #descripcion {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 440px) {
-  #nombre {
-    font-size: 2rem;
-    color: #000;
-  }
-
-  #profesion {
-    font-size: 1.5rem;
-    color: #333;
-  }
-
-  #descripcion {
-    font-size: 1.2rem;
-  }
-}
-
+/* Estilos responsive: pantallas pequeñas y medianas */
 @media (max-width: 1024px) {
-  #hero-section,
-  #projects-section {
-    flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
-    height: auto; /* Ajusta la altura automáticamente */
-    margin-top: 100px; /* Ajusta el margen superior */
-  }
+    /* Secciones Hero y Projects */
+    #hero-section,
+    #projects-section, #about-me {
+        flex-direction: column;
+        height: auto;
+        margin-top: 200px;
+    }
 
-  #banner-container {
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: center; /* Centra los elementos en la columna */
-  }
+    /* Contenedor principal del banner */
+    #banner-container, #what-i-do-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  #left-container,
-  #right-container {
-    flex: none; /* Desactiva la división en 50% para cada contenedor */
-    width: 100%; /* Hace que los contenedores ocupen el 100% del ancho */
-    margin-bottom: 20px; /* Añade un pequeño espacio entre los contenedores */
-  }
+    /* Contenedores izquierdo y derecho */
+    #left-container,
+    #right-container {
+        flex: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
-  #right-container {
-    margin-top: 20px; /* Espacio adicional entre el contenedor izquierdo y la imagen */
-  }
+    /* Ajuste del contenedor derecho */
+    #right-container {
+        margin-top: 20px;
+    }
 
-  /* Añadir margen superior al nombre en dispositivos pequeños para evitar que se meta bajo la navbar */
-  #left-container h1 {
-    margin-top: 20px; /* Espacio adicional arriba del nombre */
-  }
-}
-
-/* Botones de redes sociales */
-
-#social-media-btns {
-  display: flex;
-  gap: 15px; /* Espacio entre los botones */
-  align-items: center;
-  padding: 10px;
-  padding-left: 0;
+    /* Margen adicional para el título dentro del contenedor izquierdo */
+    #left-container h1 {
+        margin-top: 20px;
+    }
 }
 
 #social-media-btns a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px; /* Ancho del círculo */
-  height: 40px; /* Alto del círculo */
-  border-radius: 50%; /* Hace el círculo perfecto */
-  background-color: #000; /* Color de fondo por defecto */
-  transition: all 0.3s ease; /* Transición suave para el color de fondo */
+    padding-top: 20px;
 }
 
-#social-media-btns a span {
-  display: flex;
-  font-size: 24px; /* Tamaño del ícono */
-  color: white; /* Color del ícono */
+/* Media query para ajustar los botones en pantallas pequeñas */
+@media (max-width: 884px) {
+    #social-media-btns a {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
 }
 
-#social-media-btns a:hover {
-  transform: scale(1.1);
-}
-
-#social-media-btns a:active {
-  transform: scale(1);
-}
-
-/* Colores de fondo según el ícono */
-#social-media-btns a[href*="linkedin"] {
-  background-color: #0e76a8; /* Color de fondo de LinkedIn */
-}
-
-#social-media-btns a[href*="github"] {
-  background-color: #333; /* Color de fondo de GitHub */
-}
-
-#social-media-btns a[href*="mailto"] {
-  background-color: #007bff; /* Color de fondo para el correo */
-}
-
-#social-media-btns a[href^="https://wa.me"]
-{
-  background-color: #25d366; /* Color de fondo para WhatsApp */
-}
-
-/* Media query para hacer los botones más pequeños en pantallas pequeñas */
-@media (max-width: 768px) {
-  #social-media-btns a {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-  }
-}
-
-/* Estilos Projects Section */
-
-/* General Styling */
-
+/* Contenedor de la sección de proyectos */
 #projects-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Contenedor del carrusel y la descripción */
 .carousel-and-description {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  padding: 100px 50px 100px 50px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 100px 50px 100px 50px;
 }
 
-/* Carousel Styling */
+/* Contenedor principal del carrusel */
 .carousel {
-  position: relative;
-  width: 100%; /* Hacer que el carousel ocupe todo el ancho disponible */
-  max-width: 700px; /* Ajuste el ancho máximo para pantallas grandes */
-  overflow: hidden;
-  border-radius: 10px;
+    margin: 100px 0;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
+
+/* Configuración de las slides del carrusel */
 .slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-  min-width: 100%;
-  text-align: center;
+    min-width: 100%;
+    text-align: center;
 }
 
+/* Imagen dentro de cada slide */
 .slide img {
-  max-width: 100%; /* Limitar el ancho máximo de las imágenes */
-  height: auto;
-  border-radius: 10px;
-}
-
-.slide p {
-  justify-self: center;
-}
-
-@media (max-width: 1024px) {
-  .carousel-and-description {
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: center; /* Centra los elementos en la columna */
-  }
-}
-
-@media (max-width: 768px) {
-  .carousel-and-description {
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: center; /* Centra los elementos en la columna */
-  }
-  #right-container img {
-    max-width: 60%;
-  }
-}
-
-@media (max-width: 440px) {
-  #projects-section {
     max-width: 100%;
-  }
-
-  .carousel {
-    position: relative;
-    width: 400px;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-
-  #logo img {
-    max-width: 100px;
     height: auto;
-    transition: all 0.3s ease;
-  }
-
-  #right-container img {
-    max-width: 100%;
-  }
-
-  .carousel-and-description {
-    padding: 100px 0;
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: center; /* Centra los elementos en la columna */
-  }
-
-  .slide {
-    padding: 10px;
-  }
-}
-
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 48px;
-}
-
-.prev-btn {
-  left: 10px;
-}
-
-.next-btn {
-  right: 10px;
-}
-
-.slide p {
-  font-family: "Raleway", sans-serif;
-  padding: 10px;
-  font-size: 24px;
-  transition: all 0.3s ease;
-}
-
-.slide p:hover {
-  transform: scale(1.1);
-}
-
-/* Description Styling */
-#description-container {
-  max-width: 500px;
-  text-align: left;
-}
-
-.button-container {
-  display: flex;
-  gap: 20px; /* Espaciado horizontal entre botones */
-  padding: 5px 0 10px 0;
-  align-items: center; /* Centrar verticalmente (si los botones tienen alturas diferentes) */
-}
-
-.project-link {
-  display: inline-block;
-  margin: 5px 0 5px 0;
-  padding: 10px 0 10px 0;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
-  transition: all 0.3s ease;
-  width: 35%;
-  border-radius: 10px;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.project-link:hover {
-  transform: scale(1.05);
-  border-radius: 10px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.project-link:active {
-  transform: scale(1);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 440px) {
-  .project-link {
-    width: 100%;
-  }
-}
-
-.tech-icons {
-  display: flex;
-  align-items: center; /* Para alinear verticalmente */
-  gap: 15px;
-}
-
-.tech-icons i {
-  display: flex;
-  font-size: 24px;
-  margin-right: 10px;
-  justify-content: center;
-  align-items: center;
-  width: 40px; /* Ancho del círculo */
-  height: 40px; /* Alto del círculo */
-  border-radius: 50%; /* Hace el círculo perfecto */
-  background-color: #0000006e; /* Color de fondo por defecto */
-  transition: all 0.3s ease;
-}
-
-.tech-icons i:hover {
-  transform: scale(1.1); /* Efecto al pasar el ratón sobre el ícono */
-}
-
-.tech-icons i:active {
-  transform: scale(1); /* Efecto al pasar el ratón sobre el ícono */
-}
-
-@media (min-width: 768px) {
-  .project-name {
-    font-size: 3rem;
-    color: #000;
-  }
-
-  .project-description {
-    font-size: 1.5rem;
-  }
-
-  .project-features {
-    font-size: 2.5rem;
-    color: #333;
-  }
-}
-
-@media (max-width: 767px) {
-  .project-name {
-    font-size: 3rem;
-    color: #000;
-  }
-
-  .project-description {
-    font-size: 1.5rem;
-  }
-
-  .project-features {
-    font-size: 2.5rem;
-    color: #333;
-  }
-}
-
-@media (max-width: 440px) {
-  .project-name {
-    font-size: 1.5rem;
-    color: #000;
-  }
-
-  .project-features {
-    font-size: 1.4rem;
-    color: #333;
-  }
-
-  .project-description {
-    font-size: 1rem;
-  }
-  #description-container ul li {
-    font-size: 1rem;
-  }
-}
-
-.carousel-and-description ul li {
-  font-size: 1rem;
-}
-
-.carousel-and-description ul li {
-  font-size: 20px;
-}
-
-.tech-icons .fa-html5 {
-  background-color: #e44d26; /* HTML */
-  color: white;
-}
-
-.tech-icons .fa-css3-alt {
-  background-color: #264de4; /* CSS */
-  color: white;
-}
-
-.tech-icons .fa-js {
-  background-color: #f7df1e; /* JavaScript */
-  color: black;
-}
-
-.tech-icons .fa-java {
-  background-color: #007396; /* Java */
-  color: white;
-}
-
-.tech-icons .fa-database {
-  background-color: #f29111; /* MySQL */
-  color: white;
-}
-
-.tech-icons .fa-leaf {
-  background-color: #6db33f; /* Spring Boot */
-  color: white;
-}
-
-#projects-header {
-  padding: 50px;
-  text-align: center;
-  margin-bottom: -200px;
-  font-size: 48px;
-}
-
-@media (max-width: 440px) {
-  #projects-section {
-    padding: 10px;
-  }
-  #projects-container {
-    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho de la pantalla */
-
-    overflow: hidden; /* Evita que el contenido se desborde */
-  }
-
-  .carousel-and-description {
-    flex-direction: column; /* Cambiar la dirección a columna para pantallas más pequeñas */
-    align-items: center;
-  }
-
-  .slide {
-    width: 100%; /* Asegurar que las diapositivas ocupen todo el ancho disponible */
-    max-width: 100%;
-    height: auto; /* Mantener la proporción de la imagen */
-  }
-
-  .slide img {
-    width: 100%; /* Asegurar que las imágenes ocupen el 100% del contenedor */
-    height: auto; /* Mantener la proporción */
-    object-fit: cover;
-  }
-
-  #description-container {
-    text-align: center;
-    justify-self: center;
-    flex-direction: column;
-  }
-
-  .project-name,
-  .project-description {
-    text-align: center;
+    border-radius: 10px;
     padding: 0 50px;
-  }
 
-  .button-container {
-    width: 70%; /* Asegurar que los botones ocupen el 100% del contenedor */
-    justify-self: center;
-    flex-direction: column;
-    justify-content: center; /* Centrar los botones */
-    gap: 10px; /* Espaciado entre los botones */
-  }
+}
 
-  .tech-icons {
-    display: grid;
+/* Texto dentro de cada slide */
+.slide p {
     justify-self: center;
-    justify-items: center;
-    padding: 10px 0;
-    grid-template-columns: repeat(3, 1fr);
-  }
+
+}
+
+/* Media query: ajuste del carrusel en pantallas medianas */
+@media (max-width: 1024px) {
+    .carousel-and-description {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Media query: ajuste del carrusel en pantallas pequeñas */
+@media (max-width: 884px) {
+    .carousel-and-description {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #right-container img {
+        max-width: 60%;
+    }
+}
+
+/* Media query: ajuste del carrusel y elementos en pantallas muy pequeñas */
+@media (max-width: 480px) {
+    #projects-section {
+        max-width: 100%;
+    }
+
+    .carousel {
+        margin: 0;
+        position: relative;
+        width: 600px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    #logo img {
+        max-width: 100px;
+        height: auto;
+        transition: all 0.3s ease;
+    }
+
+    #right-container img {
+        max-width: 100%;
+    }
+
+    .carousel-and-description {
+        padding: 100px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slide {
+        padding: 10px;
+    }
+}
+
+/* Botones de navegación del carrusel */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 48px;
+}
+
+/* Botón de navegación anterior */
+.prev-btn {
+    left: 10px;
+}
+
+/* Botón de navegación siguiente */
+.next-btn {
+    right: 10px;
+
+}
+
+/* Texto dentro de las slides */
+.slide p {
+    font-family: "Raleway", sans-serif;
+    padding: 10px;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+/* Hover en el texto de las slides */
+.slide p:hover {
+    transform: scale(1.1);
+}
+
+/* Contenedor de descripción de los proyectos */
+#description-container {
+    max-width: 500px;
+    text-align: left;
+}
+
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    gap: 20px;
+    padding: 5px 0 10px 0;
+    align-items: center;
+}
+
+/* Botón de enlace del proyecto */
+.project-link {
+    display: inline-block;
+    margin: 5px 0 5px 0;
+    padding: 10px 0 10px 0;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    transition: all 0.5s ease;
+    width: 35%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover en enlace de proyecto */
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #000;
+    color: #fff;
+}
+
+/* Efecto activo en enlaces de proyecto */
+.project-link:active {
+    transform: scale(1);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query: ajuste del ancho de los enlaces en pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .project-link {
+        width: 100%;
+    }
+}
+
+/* Contenedor de íconos de tecnologías */
+#social-media-btns, .skills-icons, .tech-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Estilo de un ícono dentro del contenedor */
+#social-media-btns i, .skills-icons i, .tech-icons i {
+    display: flex;
+    font-size: 24px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0000006e;
+    transition: all 0.3s ease;
+}
+
+/* Hover en íconos de tecnologías */
+#social-media-btns i:hover, .skills-icons i:hover, .tech-icons i:hover {
+    transform: scale(1.1);
+}
+
+/* Efecto activo en íconos de tecnologías */
+#social-media-btns i:active, .skills-icons i:active, .tech-icons i:active {
+    transform: scale(1);
+}
+
+/* Estilos para pantallas grandes (ancho mínimo de 884px) */
+@media (min-width: 884px) {
+    .project-name {
+        font-size: 3rem;
+        color: #000;
+    }
+
+    .project-description {
+        font-size: 1.5rem;
+    }
+
+    .project-features {
+        font-size: 2.5rem;
+        color: #333;
+    }
+}
+
+/* Estilos para pantallas medianas y pequeñas (máximo ancho de 767px) */
+@media (max-width: 884px) {
+    .project-name {
+        font-size: 3rem;
+        color: #000;
+    }
+
+    .project-description {
+        font-size: 1.5rem;
+    }
+
+    .project-features {
+        font-size: 2.5rem;
+        color: #333;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (máximo ancho de 440px) */
+@media (max-width: 480px) {
+    .project-name {
+        font-size: 1.5rem;
+        color: #000;
+    }
+
+    .project-features {
+        font-size: 1.4rem;
+        color: #333;
+    }
+
+    .project-description {
+        font-size: 1rem;
+    }
+
+    #description-container ul li {
+        font-size: 1rem;
+    }
+}
+
+/* Listas dentro del carrusel y la descripción */
+.carousel-and-description ul li {
+    font-size: 1rem;
+}
+
+/* Ajuste al tamaño de fuente de los elementos dentro del carrusel */
+.carousel-and-description ul li {
+    font-size: 20px;
+}
+
+/* Estilos para íconos según tecnología */
+i.fa-html5 {
+    background-color: #e44d26;
+    color: white;
+}
+
+i.fa-css3-alt {
+    background-color: #264de4;
+    color: white;
+}
+
+i.fa-bootstrap {
+    background-color: #7110f5;
+    color: white;
+}
+
+i.fa-js {
+    background-color: #f7df1e;
+    color: black;
+}
+
+i.fa-java {
+    background-color: #007396;
+    color: white;
+}
+
+i.fa-database {
+    background-color: #f29111;
+    color: white;
+}
+
+i.fa-leaf {
+    background-color: #6db33f;
+    color: white;
+}
+
+i.fa-figma {
+    background-color: #f24e1e;
+    color: white;
+}
+
+i.fa-git {
+    background-color: #f05032;
+    color: white;
+}
+
+i.fa-github {
+    background-color: #333 !important;
+    color: white;
+}
+
+i.fa-linkedin {
+    background-color: #0077b5 !important;
+    color: white;
+}
+
+i.fa-envelope {
+    background-color: #0077b5 !important;
+    color: white;
+}
+
+i.fa-whatsapp {
+    background-color: #25d366 !important;
+    color: white;
+}
+
+i.fa-adjust {
+    background-color: white !important;
+    color: black;
+}
+
+/* Título principal de la sección de proyectos */
+#projects-header {
+    padding: 50px;
+    text-align: center;
+    margin-bottom: -200px;
+    font-size: 48px;
+}
+
+/* Media query para pantallas muy pequeñas */
+@media (max-width: 440px) {
+    #projects-section {
+        padding: 10px;
+    }
+
+    #projects-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .carousel-and-description {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slide {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    #description-container {
+        text-align: center;
+        justify-self: center;
+        flex-direction: column;
+    }
+
+    .project-name,
+    .project-description {
+        text-align: center;
+        padding: 0 50px;
+    }
+
+    .button-container {
+        width: 70%;
+        justify-self: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .tech-icons {
+        display: grid;
+        justify-self: center;
+        justify-items: center;
+        padding: 10px 0;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Variables para colores base */
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+}
+
+/* Tema oscuro (valores de las variables) */
+[data-theme='dark'] {
+    --background-color: #000;
+    --text-color: #fff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Botón de cambio de tema */
+#theme-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f4f4f4;
+    color: #000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover en botón de cambio de tema */
+#theme-toggle:hover {
+    transform: scale(1.02);
+}
+
+/* Tema oscuro para el botón */
+.dark-mode #theme-toggle {
+    background-color: #1e1e1e;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+}
+
+/* Hover del botón en modo oscuro */
+.dark-mode #theme-toggle:hover {
+    transform: scale(1.02);
+}
+
+/* Tema oscuro global */
+.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --link-color: #64b5f6;
+}
+
+.dark-mode .nav-btn {
+    color: white;
+}
+
+.dark-mode body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Logo en tema oscuro */
+.dark-mode #logo img {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Enlaces en tema oscuro */
+.dark-mode a {
+    color: var(--link-color);
+}
+
+/* Navegación en tema oscuro */
+.dark-mode nav {
+    background-color: rgba(18, 18, 18, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.dark-mode #nav-btns li a {
+    color: #ffffff;
+}
+
+.dark-mode #hamburger i {
+    color: #ffffff;
+}
+
+/* Sección de proyectos en tema oscuro */
+.dark-mode #projects-section {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo de nombre y profesión en tema oscuro */
+.dark-mode #nombre,
+.dark-mode #profesion {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Títulos de proyectos en tema oscuro */
+.dark-mode #projects-header {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Botones de acción en tema oscuro */
+.dark-mode button.action-btn {
+    background-color: #ffffff;
+    color: #000;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+}
+
+/* Enlaces a proyectos en tema oscuro */
+.dark-mode .project-link {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    color: #fff;
+    background-color: #121212;
+}
+
+/* Hover de enlaces a proyectos en tema oscuro */
+.dark-mode .project-link:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+    color: #000;
+}
+
+/* Nombres y características de proyecto en tema oscuro */
+.dark-mode .project-name,
+.dark-mode .project-features {
+    color: #ffffff;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajuste de tema oscuro en botón de cambio de tema */
+.dark-mode #theme-toggle {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+footer  {
+    display: flex;
+    height: 20px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+footer h3 {
+    height: 100px;
+    padding: 50px 0;
+    text-align: center;
 }
