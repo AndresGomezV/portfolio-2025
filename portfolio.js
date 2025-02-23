@@ -14,11 +14,14 @@ const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const carouselContainer = document.querySelector('.carousel');
 let currentSlide = 0;
+let startX = 0; // Posición inicial del toque
+let endX = 0;   // Posición final del toque
+
 
 // Validar si los elementos están presentes
 if (slides.length && prevBtn && nextBtn && carouselContainer) {
   // Configurar autoplay con pausa al pasar el mouse
-  let autoplay = setInterval(() => changeSlide(1), 8000);
+  let autoplay = setInterval(() => changeSlide(1), 6000);
 
   carouselContainer.addEventListener('mouseover', () => clearInterval(autoplay)); // Pausa al pasar el mouse
   carouselContainer.addEventListener('mouseout', () => {
@@ -43,6 +46,32 @@ if (slides.length && prevBtn && nextBtn && carouselContainer) {
   prevBtn.addEventListener('click', () => changeSlide(-1)); // Slide anterior
   nextBtn.addEventListener('click', () => changeSlide(1));  // Siguiente slide
 }
+
+// Manejar eventos táctiles
+carouselContainer.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX; // Registrar la posición inicial del toque
+});
+
+carouselContainer.addEventListener('touchmove', (e) => {
+  endX = e.touches[0].clientX; // Registrar la posición mientras se mueve el dedo
+});
+
+carouselContainer.addEventListener('touchend', () => {
+  const touchDelta = endX - startX; // Diferencia entre posición inicial y final
+  if (touchDelta > 50) {
+    // Deslizamiento hacia la derecha
+    changeSlide(-1);
+  } else if (touchDelta < -50) {
+    // Deslizamiento hacia la izquierda
+    changeSlide(1);
+  }
+  // Reiniciar variables
+  startX = 0;
+  endX = 0;
+});
+
+
+
 
 // Cambiar Tema (Oscuro/Claro)
 const toggleTheme = () => {
