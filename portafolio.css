@@ -1037,11 +1037,16 @@ i.fa-adjust {
         width: 70%;
         flex-direction: column;
         gap: 10px;
+        justify-self: center;
+    }
+
+    .button-container a {
+        display: flex;
         justify-content: center !important;
         align-items: center !important;
         justify-self: center !important;
+        align-self: center !important;
     }
-
 
     .tech-icons {
         display: grid !important;
@@ -1049,6 +1054,13 @@ i.fa-adjust {
         justify-items: center !important;
         padding: 10px 0 !important;
         grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .tech-icons {
+        display: grid !important;
+        justify-self: center !important;
+        justify-items: center !important;
+
     }
 }
 
