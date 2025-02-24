@@ -192,6 +192,7 @@ nav {
     }
 }
 
+
 /* Estilos para la sección Hero */
 #hero-section {
     display: flex;
@@ -445,6 +446,19 @@ p {
 
 #social-media-btns a {
     padding-top: 20px;
+}
+
+#cv {
+    background-color: #000000 !important;
+    color: white !important;
+    border: none !important;
+    text-align: left !important;
+    font-size: 16px !important;
+    font-family: "Raleway", sans-serif !important;
+    transition: all 0.3s ease !important;
+    width: 40px !important;
+    height: 40px !important;
+
 }
 
 /* Media query para ajustar los botones en pantallas pequeñas */
