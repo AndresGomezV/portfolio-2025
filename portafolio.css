@@ -309,7 +309,7 @@ nav {
     height: 50vh;
     margin-top: 150px;
     padding: 0 20px 50px;
-    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.1);k
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Sección de proyectos */
@@ -515,6 +515,9 @@ p {
     #descripcion {
         font-size: 1.2rem;
     }
+}
+.image-description {
+    text-align: center;
 }
 
 /* Estilos responsive: pantallas pequeñas y medianas */
@@ -727,7 +730,8 @@ p {
 /* Contenedor de descripción de los proyectos */
 #description-container {
     max-width: 500px;
-    text-align: left;
+    text-align: center;
+
 }
 
 /* Contenedor de botones */
@@ -736,6 +740,8 @@ p {
     gap: 20px;
     padding: 5px 0 10px 0;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* Botón de enlace del proyecto */
@@ -776,10 +782,22 @@ p {
     }
 }
 
+strong {
+    font-weight: bold;
+}
 /* Contenedor de íconos de tecnologías */
-#social-media-btns, .skills-icons, .tech-icons {
+#social-media-btns {
+    display: flex;
+
+    text-align: center;
+    gap: 15px;
+}
+
+.skills-icons, .tech-icons {
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 15px;
 }
 
@@ -805,6 +823,14 @@ p {
 /* Efecto activo en íconos de tecnologías */
 #social-media-btns i:active, .skills-icons i:active, .tech-icons i:active {
     transform: scale(1);
+}
+
+.project-description {
+    text-align: center;
+}
+
+.project-name {
+    text-align: center;
 }
 
 /* Estilos para pantallas grandes (ancho mínimo de 884px) */
