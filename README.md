@@ -33,7 +33,7 @@ Puedes visitar mi portafolio en línea aquí:
 ### 📌 Reddit Minimal
 - amming es una aplicación web que permite a los usuarios crear y guardar listas de reproducción personalizadas en su cuenta de Spotify. 
 - Tecnologías utilizadas: `JavaScript`, `HTML`, `CSS`, `React`.
-- [Ver en GitHub](https://github.com/AndresGomezV/jamming)
+- [Ver en GitHub](https://github.com/AndresGomezV/Jammming)
 
 
 ## 📞 Contacto
