@@ -20,12 +20,12 @@ Puedes visitar mi portafolio en línea aquí:
 
 ## 📌 Proyectos Destacados
 
-### 📌 [Elevia E-Commerce]
+### 📌 Elevia E-Commerce
 - Una plataforma de comercio electrónico diseñada para ofrecer una experiencia de compra fluida y accesible en cualquier dispositivo. Cuenta con un catálogo interactivo, carrito de compras dinámico y autenticación segura para garantizar una navegación intuitiva y confiable.
 - Tecnologías utilizadas: `Java`, `Spring Boot`, `JavaScript`, `API REST`, `HTML`, `CSS`, `JWT`.
 - [Ver en GitHub](https://github.com/JaviSGalindo/Generation-7-Final-Proyect) | [Ver en Vivo](https://javisgalindo.github.io/Generation-7-Final-Proyect/)
 
-### 📌 [Reddit Minimal]
+### 📌 Reddit Minimal
 - RedditMinimal es una interfaz minimalista de Reddit desarrollada con React, JavaScript, HTML y CSS. Se alimenta de la API externa de Reddit para mostrar publicaciones de diferentes categorías, sus comentarios respectivos y una barra de búsqueda para facilitar la navegación.
 - Tecnologías utilizadas: `JavaScript`, `HTML`, `CSS`, `React`.
 - [Ver en GitHub](https://github.com/AndresGomezV/reddit-minimal)
@@ -35,7 +35,7 @@ Puedes visitar mi portafolio en línea aquí:
 
 Si quieres contactarme, puedes hacerlo a través de:
 - **Email:** [andresxv98@gmail.com](mailto:andresxv98@gmail.com)
-- **LinkedIn:** [Mi Perfil]([URL_LINKEDIN](https://www.linkedin.com/in/andresgomezvasquez))
+- **LinkedIn:** [Mi Perfil]([URL_LINKEDIN](https://www.linkedin.com/in/andresgomezvasquez)
 - **GitHub:** [Mi GitHub](https://github.com/AndresGomezV)
 
 ---
