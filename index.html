@@ -1,318 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
             name="description"
             content="Hola, soy Andrés Gómez, desarrollador Full-Stack. Descubre mis proyectos y colaboremos en ideas increíbles."
-    />
+        />
 
-    <title>Portafolio</title>
+        <title>Portafolio</title>
 
-    <link
+        <link
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Nunito+Sans:wght@400&display=swap"
             rel="stylesheet"
-    />
+        />
 
-    <link
+        <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+        />
 
-    <link rel="stylesheet" href="portafolio.css"/>
-</head>
-<body>
-<!-- NavBar-->
+        <link rel="stylesheet" href="portafolio.css" />
+    </head>
+    <body>
+        <!-- NavBar-->
 
-<nav id="navBar">
-    <div id="navbar-container">
-        <a href="#" id="logo">
-            <img src="./imgs/LOGO2.png" alt="Logo"/>
-        </a>
-        <ul id="nav-btns" class="hidden">
-            <li>
-                <div id="theme-toggle" aria-label="Cambiar tema">
-                    <i class="fas fa-adjust"></i> <!-- Ícono para el cambio de tema -->
-                </div>
-
-            </li>
-            <li>
-                <a href="#">Inicio</a>
-            </li>
-            <li>
-                <a href="#about-me">Acerca de mí</a>
-            </li>
-            <li>
-                <a href="#Education">Educación</a>
-            </li>
-            <li>
-                <a href="#projects-section">Proyectos</a>
-            </li>
-            <li>
-                <a href="#contact-me">Contáctame</a>
-            </li>
-        </ul>
-    </div>
-    <div
-            id="hamburger"
-            onclick="toggleMenu()"
-            aria-label="Abrir menú de navegación"
-    >
-        <i class="fa fa-bars"></i>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-
-<section id="hero-section">
-    <div id="banner-container">
-        <header id="left-container">
-            <h1 id="nombre">Andrés Gómez Vásquez</h1>
-            <h2 id="profesion">Desarrollador Full-Stack</h2>
-            <p id="descripcion">
-                La programación me apasiona y me encanta todo lo que se
-                puede lograr con código. Estoy en constante aprendizaje y siempre
-                estoy buscando nuevas oportunidades para colaborar en proyectos
-                interesantes.<strong> ¡Hagamos algo increíble juntos!</strong>
-            </p>
-
-            <!-- Botones de redes sociales -->
-
-            <div id="social-media-btns">
-                <a
-                        href="https://www.linkedin.com/in/andresgomezv/"
-                        aria-label="LinkedIn de Andrés Gómez"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                >
-              <span>
-                <i class="fab fa-linkedin"></i>
-              </span>
+        <nav id="navBar">
+            <div id="navbar-container">
+                <a href="#" id="logo">
+                    <img src="./imgs/LOGO2.png" alt="Logo" />
                 </a>
-                <a
-                        href="https://github.com/AndresGomezV"
-                        aria-label="GitHub de Andrés Gómez"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                >
-              <span>
-                <i class="fab fa-github"></i>
-              </span>
-                </a>
-                <a
-                        href="mailto:andresxv98@gmail.com"
-                        aria-label="Enviar al correo de Andrés Gómez"
-                >
-              <span>
-                <i class="fas fa-envelope"></i>
-              </span>
-                </a>
-                <a
-                        href="https://wa.me/573245768250"
-                        aria-label="WhatsApp de Andrés Gómez"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                >
-              <span>
-                <i id="wp" class="fab fa-whatsapp"></i>
-              </span>
-                </a>
-                <a href="cv/CVAndresG.pdf" download="CVAndresG.pdf" target="_blank">
-                    <i id="cv">CV</i>
-                </a>
-            </div>
-        </header>
-        <div id="right-container">
-            <img src="./imgs/AndresGomez.jpg" alt="Foto de Andrés Gómez"/>
-        </div>
-    </div>
-</section>
-
-<section id="about-me">
-    <div id="what-i-do-container">
-        <header class="header-content">
-            <h1>¿Qué hago?</h1>
-            <br>
-            <h2>Full Stack Development</h2>
-            <br>
-            <div class="skills-icons">
-                <i class="fab fa-html5" title="HTML"></i>
-                <i class="fab fa-css3-alt" title="CSS"></i>
-                <i class="fab fa-bootstrap" title="Bootstrap"></i>
-                <i class="fab fa-js" title="JavaScript"></i>
-                <i class="fab fa-java" title="Java"></i>
-                <i class="fas fa-leaf" title="Spring Boot"></i>
-                <i class="fas fa-database" title="MySQL"></i>
-                <i class="fab fa-figma" title="Figma"></i>
-                <i class="fab fa-git" title="Git"></i>
-                <i class="fab fa-github" title="GitHub"></i>
-            </div>
-            <!-- Skills Description Section -->
-            <div class="skills-description">
-                <ul>
-                    <li>⚡ Diseño y desarrollo interfaces de usuario modernas, intuitivas y dinámicas.</li>
-                    <li>⚡ Creo soluciones completas que integren el frontend y backend de manera eficiente.</li>
-                    <li>⚡ Implemento sistemas backend robustos, seguros y escalables.</li>
-                    <li>⚡ Gestiono y optimizo bases de datos para un manejo eficiente de la información.</li>
-                    <li>⚡ Desarrollo funcionalidades personalizadas orientadas a las necesidades del cliente o
-                        proyecto.
+                <ul id="nav-btns" class="hidden">
+                    <li>
+                        <div id="theme-toggle" aria-label="Cambiar tema">
+                            <i class="fas fa-adjust"></i>
+                            <!-- Ícono para el cambio de tema -->
+                        </div>
                     </li>
-                    <li>⚡ Colaboro en equipos multidisciplinarios para llevar a cabo proyectos innovadores.</li>
-                    <li>⚡ Me adapto constantemente a nuevas herramientas y metodologías para garantizar soluciones
-                        actualizadas y competitivas.
+                    <li>
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#about-me">Acerca de mí</a>
+                    </li>
+                    <li>
+                        <a href="#Education">Educación</a>
+                    </li>
+                    <li>
+                        <a href="#projects-section">Proyectos</a>
+                    </li>
+                    <li>
+                        <a href="#contact-me">Contáctame</a>
                     </li>
                 </ul>
             </div>
-        </header>
-    </div>
-
-</section>
-
-
-<section id="projects-section">
-    <h1 id="projects-header">Proyectos</h1>
-    <div id="projects-container">
-
-        <div class="carousel-and-description">
-            <!-- Carrusel -->
-            <div class="carousel" role="region" aria-label="Galería de proyectos">
-                <div class="slides">
-                    <div class="slide active">
-                        <img src="./imgs/homeport.png" alt="Página principal Elevia"/>
-                        <p class="image-description">Home Page</p>
-                    </div>
-                    <div class="slide">
-                        <img src="./imgs/loginport.png" alt="Página Login"/>
-                        <p class="image-description">Login</p>
-                    </div>
-                    <div class="slide">
-                        <img src="./imgs/registroport.png" alt="Página registro"/>
-                        <p class="image-description">Registro</p>
-                    </div>
-                    <div class="slide">
-                        <img src="./imgs/catalogoport.png" alt="Catálogo"/>
-                        <p class="image-description">Catálogo</p>
-                    </div>
-                    <div class="slide">
-                        <img src="./imgs/productoport.png" alt="Modal Producto"/>
-                        <p class="image-description">Modal Producto</p>
-                    </div>
-                    <div class="slide">
-                        <img src="./imgs/carritoport.png" alt="Carrito de compras"/>
-                        <p class="image-description">Carrito</p>
-                    </div>
-                    <div class="slide">
-                        <img src="./imgs/aboutusport.png" alt="Sobre Nosotros"/>
-                        <p class="image-description">Sobre Nosotros</p>
-                    </div>
-                    <div class="slide">
-                        <img src="./imgs/contactport.png" alt="Contactanos"/>
-                        <p class="image-description">Contáctanos</p>
-                    </div>
-                </div>
-                <button class="nav-btn prev-btn">&#8249;</button>
-                <button class="nav-btn next-btn">&#8250;</button>
+            <div
+                id="hamburger"
+                onclick="toggleMenu()"
+                aria-label="Abrir menú de navegación"
+            >
+                <i class="fa fa-bars"></i>
             </div>
+        </nav>
 
-            <!-- Description -->
-            <header id="description-container">
-                <h2 class="project-name">Elevia: E-Commerce</h2>
-                <p class="project-description">
-                    Una plataforma de comercio electrónico diseñada para ofrecer una experiencia de compra fluida y accesible en cualquier dispositivo. Cuenta con un catálogo interactivo, carrito de compras dinámico y autenticación segura para garantizar una navegación intuitiva y confiable.
-                </p>
-                <h3 class="project-features">Características</h3>
-                <ul>
-                    <li>Responsividad total – Diseño adaptable a cualquier dispositivo para una mejor experiencia de usuario.</li>
-                    <li>Seguridad y eficiencia – Autenticación con JWT y manejo estructurado de datos con DTOs y MySQL.</li>
-                    <li> Arquitectura escalable – Desarrollo modular con APIs RESTful y control de versiones con GIT.</li>
-                </ul>
-                <div class="button-container">
-                    <a
-                            href="https://github.com/JaviSGalindo/Generation-7-Final-Proyect"
+        <!-- Hero Section -->
+
+        <section id="hero-section">
+            <div id="banner-container">
+                <header id="left-container">
+                    <h1 id="nombre">Andrés Gómez Vásquez</h1>
+                    <h2 id="profesion">Desarrollador Full-Stack</h2>
+                    <p id="descripcion">
+                        La programación me apasiona y me encanta todo lo que se
+                        puede lograr con código. Estoy en constante aprendizaje
+                        y siempre estoy buscando nuevas oportunidades para
+                        colaborar en proyectos interesantes.<strong>
+                            ¡Hagamos algo increíble juntos!</strong
+                        >
+                    </p>
+
+                    <!-- Botones de redes sociales -->
+
+                    <div id="social-media-btns">
+                        <a
+                            href="https://www.linkedin.com/in/andresgomezv/"
+                            aria-label="LinkedIn de Andrés Gómez"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="project-link"
-                    >
-                        GitHub
-                    </a>
-                    <a
-                            href="https://javisgalindo.github.io/Generation-7-Final-Proyect/"
+                        >
+                            <span>
+                                <i class="fab fa-linkedin"></i>
+                            </span>
+                        </a>
+                        <a
+                            href="https://github.com/AndresGomezV"
+                            aria-label="GitHub de Andrés Gómez"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="project-link"
+                        >
+                            <span>
+                                <i class="fab fa-github"></i>
+                            </span>
+                        </a>
+                        <a
+                            href="mailto:andresxv98@gmail.com"
+                            aria-label="Enviar al correo de Andrés Gómez"
+                        >
+                            <span>
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                        </a>
+                        <a
+                            href="https://wa.me/573245768250"
+                            aria-label="WhatsApp de Andrés Gómez"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span>
+                                <i id="wp" class="fab fa-whatsapp"></i>
+                            </span>
+                        </a>
+                        <a
+                            href="cv/CVAndresG.pdf"
+                            download="CVAndresG.pdf"
+                            target="_blank"
+                        >
+                            <i id="cv">CV</i>
+                        </a>
+                    </div>
+                </header>
+                <div id="right-container">
+                    <img
+                        src="./imgs/AndresGomez.jpg"
+                        alt="Foto de Andrés Gómez"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <section id="about-me">
+            <div id="what-i-do-container">
+                <header class="header-content">
+                    <h1>¿Qué hago?</h1>
+                    <br />
+                    <h2>Full Stack Development</h2>
+                    <br />
+                    <div class="skills-icons">
+                        <i class="fab fa-html5" title="HTML"></i>
+                        <i class="fab fa-css3-alt" title="CSS"></i>
+                        <i class="fab fa-bootstrap" title="Bootstrap"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                        <i class="fab fa-java" title="Java"></i>
+                        <i class="fas fa-leaf" title="Spring Boot"></i>
+                        <i class="fas fa-database" title="MySQL"></i>
+                        <i class="fab fa-figma" title="Figma"></i>
+                        <i class="fab fa-git" title="Git"></i>
+                        <i class="fab fa-github" title="GitHub"></i>
+                    </div>
+                    <!-- Skills Description Section -->
+                    <div class="skills-description">
+                        <ul>
+                            <li>
+                                ⚡ Diseño y desarrollo interfaces de usuario
+                                modernas, intuitivas y dinámicas.
+                            </li>
+                            <li>
+                                ⚡ Creo soluciones completas que integren el
+                                frontend y backend de manera eficiente.
+                            </li>
+                            <li>
+                                ⚡ Implemento sistemas backend robustos, seguros
+                                y escalables.
+                            </li>
+                            <li>
+                                ⚡ Gestiono y optimizo bases de datos para un
+                                manejo eficiente de la información.
+                            </li>
+                            <li>
+                                ⚡ Desarrollo funcionalidades personalizadas
+                                orientadas a las necesidades del cliente o
+                                proyecto.
+                            </li>
+                            <li>
+                                ⚡ Colaboro en equipos multidisciplinarios para
+                                llevar a cabo proyectos innovadores.
+                            </li>
+                            <li>
+                                ⚡ Me adapto constantemente a nuevas
+                                herramientas y metodologías para garantizar
+                                soluciones actualizadas y competitivas.
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+        </section>
+
+        <section id="projects-section">
+            <h1 id="projects-header">Proyectos</h1>
+            <div id="projects-container">
+                <div class="carousel-and-description">
+                    <!-- Carrusel -->
+                    <div
+                        class="carousel"
+                        role="region"
+                        aria-label="Galería de proyectos"
                     >
-                        Página Web
-                    </a>
+                        <div class="slides">
+                            <div class="slide active">
+                                <img
+                                    src="./imgs/homeport.png"
+                                    alt="Página principal Elevia"
+                                />
+                                <p class="image-description">Home Page</p>
+                            </div>
+                            <div class="slide">
+                                <img
+                                    src="./imgs/loginport.png"
+                                    alt="Página Login"
+                                />
+                                <p class="image-description">Login</p>
+                            </div>
+                            <div class="slide">
+                                <img
+                                    src="./imgs/registroport.png"
+                                    alt="Página registro"
+                                />
+                                <p class="image-description">Registro</p>
+                            </div>
+                            <div class="slide">
+                                <img
+                                    src="./imgs/catalogoport.png"
+                                    alt="Catálogo"
+                                />
+                                <p class="image-description">Catálogo</p>
+                            </div>
+                            <div class="slide">
+                                <img
+                                    src="./imgs/productoport.png"
+                                    alt="Modal Producto"
+                                />
+                                <p class="image-description">Modal Producto</p>
+                            </div>
+                            <div class="slide">
+                                <img
+                                    src="./imgs/carritoport.png"
+                                    alt="Carrito de compras"
+                                />
+                                <p class="image-description">Carrito</p>
+                            </div>
+                            <div class="slide">
+                                <img
+                                    src="./imgs/aboutusport.png"
+                                    alt="Sobre Nosotros"
+                                />
+                                <p class="image-description">Sobre Nosotros</p>
+                            </div>
+                            <div class="slide">
+                                <img
+                                    src="./imgs/contactport.png"
+                                    alt="Contactanos"
+                                />
+                                <p class="image-description">Contáctanos</p>
+                            </div>
+                        </div>
+                        <button class="nav-btn prev-btn">&#8249;</button>
+                        <button class="nav-btn next-btn">&#8250;</button>
+                    </div>
+
+                    <!-- Description -->
+                    <header id="description-container">
+                        <h2 class="project-name">Elevia: E-Commerce</h2>
+                        <p class="project-description">
+                            Una plataforma de comercio electrónico diseñada para
+                            ofrecer una experiencia de compra fluida y accesible
+                            en cualquier dispositivo. Cuenta con un catálogo
+                            interactivo, carrito de compras dinámico y
+                            autenticación segura para garantizar una navegación
+                            intuitiva y confiable.
+                        </p>
+                        <h3 class="project-features">Características</h3>
+                        <ul>
+                            <li>
+                                Responsividad total – Diseño adaptable a
+                                cualquier dispositivo para una mejor experiencia
+                                de usuario.
+                            </li>
+                            <li>
+                                Seguridad y eficiencia – Autenticación con JWT y
+                                manejo estructurado de datos con DTOs y MySQL.
+                            </li>
+                            <li>
+                                Arquitectura escalable – Desarrollo modular con
+                                APIs RESTful y control de versiones con GIT.
+                            </li>
+                        </ul>
+                        <div class="button-container">
+                            <a
+                                href="https://github.com/JaviSGalindo/Generation-7-Final-Proyect"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                GitHub
+                            </a>
+                            <a
+                                href="https://javisgalindo.github.io/Generation-7-Final-Proyect/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                Página Web
+                            </a>
+                        </div>
+                        <div class="tech-icons">
+                            <i class="fab fa-html5" title="HTML"></i>
+                            <i class="fab fa-css3-alt" title="CSS"></i>
+                            <i class="fab fa-js" title="JavaScript"></i>
+                            <i class="fab fa-java" title="Java"></i>
+                            <i class="fas fa-database" title="MySQL"></i>
+                            <i class="fas fa-leaf" title="Spring Boot"></i>
+                        </div>
+                    </header>
                 </div>
-                <div class="tech-icons">
-                    <i class="fab fa-html5" title="HTML"></i>
-                    <i class="fab fa-css3-alt" title="CSS"></i>
-                    <i class="fab fa-js" title="JavaScript"></i>
-                    <i class="fab fa-java" title="Java"></i>
-                    <i class="fas fa-database" title="MySQL"></i>
-                    <i class="fas fa-leaf" title="Spring Boot"></i>
+
+                <!--Reddit Minimal-->
+                <div class="carousel-and-description">
+                    <!-- Carrusel -->
+                    <div
+                        class="carousel"
+                        role="region"
+                        aria-label="Galería de proyectos"
+                    >
+                        <div class="slides">
+                            <div class="slide active">
+                                <img
+                                    src="./imgs/RedditMinimal.png"
+                                    alt="Página principal Elevia"
+                                />
+                                <p class="image-description">Home Page</p>
+                            </div>
+                        </div>
+                        <button class="nav-btn prev-btn">&#8249;</button>
+                        <button class="nav-btn next-btn">&#8250;</button>
+                    </div>
+
+                    <!-- Description -->
+                    <header id="description-container">
+                        <h2 class="project-name">Reddit Minimal</h2>
+                        <p class="project-description">
+                            RedditMinimal es una interfaz minimalista de Reddit
+                            desarrollada con React, JavaScript, HTML y CSS. Se
+                            alimenta de la API externa de Reddit para mostrar
+                            publicaciones de diferentes categorías, sus
+                            comentarios respectivos y una barra de búsqueda para
+                            facilitar la navegación.
+                        </p>
+                        <h3 class="project-features">Características</h3>
+
+                        <ul>
+                            <li>
+                                Interfaz simple y minimalista inspirada en
+                                Reddit.
+                            </li>
+                            <li>
+                                Obtención dinámica de publicaciones de diversas
+                                categorías mediante la API de Reddit.
+                            </li>
+                            <li>
+                                Visualización de comentarios dentro de cada
+                                publicación
+                            </li>
+                            <li>
+                                Barra de búsqueda para navegar por las
+                                publicaciones.
+                            </li>
+                        </ul>
+                        <div class="button-container">
+                            <a
+                                href="https://github.com/AndresGomezV/reddit-minimal"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                GitHub
+                            </a>
+                        </div>
+                        <div class="tech-icons">
+                            <i class="fab fa-html5" title="HTML"></i>
+                            <i class="fab fa-css3-alt" title="CSS"></i>
+                            <i class="fab fa-js" title="JavaScript"></i>
+                            <i class="fab fa-react" title="React"></i>
+                        </div>
+                    </header>
                 </div>
-            </header>
-        </div>
 
-    <!--Reddit Minimal-->
-    <div class="carousel-and-description">
-        <!-- Carrusel -->
-        <div class="carousel" role="region" aria-label="Galería de proyectos">
-            <div class="slides">
-                <div class="slide active">
-                    <img src="./imgs/RedditMinimal.png" alt="Página principal Elevia"/>
-                    <p class="image-description">Home Page</p>
-                </div>            
+                <!--Jamming-->
+                <div class="carousel-and-description">
+                    <!-- Carrusel -->
+                    <div
+                        class="carousel"
+                        role="region"
+                        aria-label="Galería de proyectos"
+                    >
+                        <div class="slides">
+                            <div class="slide active">
+                                <img
+                                    src="./imgs/Jamming.png"
+                                    alt="Página principal Elevia"
+                                />
+                                <p class="image-description">Home Page</p>
+                            </div>
+                        </div>
+                        <button class="nav-btn prev-btn">&#8249;</button>
+                        <button class="nav-btn next-btn">&#8250;</button>
+                    </div>
+
+                    <!-- Description -->
+                    <header id="description-container">
+                        <h2 class="project-name">Jamming</h2>
+                        <p class="project-description">
+                            Jamming es una aplicación web que se alimenta de la API de Spotify y permite a los
+                            usuarios crear y guardar listas de reproducción
+                            personalizadas en su cuenta de Spotify.
+                        </p>
+                        <h3 class="project-features">Características</h3>
+
+                        <ul>
+                            <li>
+                                Búsqueda de Canciones – Encuentra cualquier
+                                canción en la base de datos de Spotify.
+                            </li>
+                            <li>
+                                Previsualización de Resultados – Muestra los
+                                resultados en tiempo real.
+                            </li>
+                            <li>
+                                Creación de Playlist – Agrega canciones a una
+                                lista personalizada
+                            </li>
+                            <li>
+                                Guardado en Spotify – Guarda la lista de
+                                reproducción directamente en tu cuenta de
+                                Spotify.
+                            </li>
+                        </ul>
+                        <div class="button-container">
+                            <a
+                                href="https://github.com/AndresGomezV/Jammming"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                GitHub
+                            </a>
+                        </div>
+                        <div class="tech-icons">
+                            <i class="fab fa-html5" title="HTML"></i>
+                            <i class="fab fa-css3-alt" title="CSS"></i>
+                            <i class="fab fa-js" title="JavaScript"></i>
+                            <i class="fab fa-react" title="React"></i>
+                        </div>
+                    </header>
+                </div>
             </div>
-            <button class="nav-btn prev-btn">&#8249;</button>
-            <button class="nav-btn next-btn">&#8250;</button>
-        </div>
+        </section>
 
-        <!-- Description -->
-        <header id="description-container">
-            <h2 class="project-name">Reddit Minimal</h2>
-            <p class="project-description">
-                RedditMinimal es una interfaz minimalista de Reddit desarrollada con React, JavaScript, HTML y CSS. Se alimenta de la API externa de Reddit para mostrar publicaciones de diferentes categorías, sus comentarios respectivos y una barra de búsqueda para facilitar la navegación.
-            </p>
-            <h3 class="project-features">Características</h3>
-            
-            <ul>
-                <li>Interfaz simple y minimalista inspirada en Reddit.</li>
-                <li>Obtención dinámica de publicaciones de diversas categorías mediante la API de Reddit.</li>
-                <li> Visualización de comentarios dentro de cada publicación</li>
-                <li>Barra de búsqueda para navegar por las publicaciones.</li>
-            </ul>
-            <div class="button-container">
-                <a
-                        href="https://github.com/AndresGomezV/reddit-minimal"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link"
-                >
-                    GitHub
-                </a>
-               
-            </div>
-            <div class="tech-icons">
-                <i class="fab fa-html5" title="HTML"></i>
-                <i class="fab fa-css3-alt" title="CSS"></i>
-                <i class="fab fa-js" title="JavaScript"></i>
-                <i class="fab fa-react" title="React"></i>
+        <!-- Footer-->
 
-                
-            </div>
-        </header>
-    </div>
-    </div>
-</section>
-
-<!-- Footer-->
-
-<footer>
-    <h3>Made with &hearts; by Andrés G. &COPY; 2025</h3>
-</footer>
-<script src="portfolio.js"></script>
-</body>
+        <footer>
+            <h3>Made with &hearts; by Andrés G. &COPY; 2025</h3>
+        </footer>
+        <script src="portfolio.js"></script>
+    </body>
 </html>
