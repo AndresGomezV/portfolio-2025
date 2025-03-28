@@ -35,7 +35,7 @@ Puedes visitar mi portafolio en línea aquí:
 
 Si quieres contactarme, puedes hacerlo a través de:
 - **Email:** [andresxv98@gmail.com](mailto:andresxv98@gmail.com)
-- **LinkedIn:** [Mi Perfil]([URL_LINKEDIN](https://www.linkedin.com/in/andresgomezvasquez)
+- **LinkedIn:** [Mi Perfil](https://www.linkedin.com/in/andresgomezvasquez)
 - **GitHub:** [Mi GitHub](https://github.com/AndresGomezV)
 
 ---
