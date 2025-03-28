@@ -319,9 +319,10 @@ nav {
     align-items: center;
     flex-direction: column;
     padding: 0 20px 50px;
-    margin-top: 100px;
+    margin-top: 30rem;
+    margin-bottom: 30rem;
     height: 100vh;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
 }
 
 /*Section About me */
@@ -588,6 +589,8 @@ p {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    flex-direction: column;
+
 }
 
 /* Contenedor del carrusel y la descripción */
@@ -595,7 +598,7 @@ p {
     display: flex;
     gap: 20px;
     align-items: center;
-    padding: 100px 50px 100px 50px;
+    padding: 100px 50px 0 50px;
 }
 
 /* Contenedor principal del carrusel */
@@ -688,6 +691,7 @@ p {
 
     .carousel-and-description {
         padding: 100px 0;
+        padding-bottom: 0px;
         flex-direction: column;
         align-items: center;
     }
@@ -950,6 +954,11 @@ i.fa-js {
 i.fa-java {
     background-color: #007396;
     color: white;
+}
+
+i.fa-react {
+    background-color: #20232a; 
+    color: #61dafb;
 }
 
 i.fa-database {
@@ -1228,7 +1237,7 @@ body {
 footer  {
     display: flex;
     height: 20px;
-
+  
     align-items: center;
     justify-content: center;
 }
